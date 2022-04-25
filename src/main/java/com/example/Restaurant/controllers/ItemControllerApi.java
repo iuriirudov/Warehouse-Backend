@@ -1,8 +1,9 @@
 package com.example.Restaurant.controllers;
 
 import com.example.Restaurant.entities.Item;
+import com.example.Restaurant.entities.User;
 import com.example.Restaurant.services.ItemService;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.example.Restaurant.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import java.util.List;
 public class ItemControllerApi {
 
     @Autowired private ItemService itemService;
+    @Autowired private UserService userService;
 
     // Create Operation
     @PostMapping
@@ -35,6 +37,17 @@ public class ItemControllerApi {
     @GetMapping("{id}")
     public Item fetchItem(@PathVariable("id") Long id) {
         return itemService.findItemById(id);
+    }
+
+    @PostMapping("{id}")
+    public String addItemToCart(@PathVariable("id") Long id, @RequestParam Long userId) {
+        Item item = itemService.findItemById(id);
+        User user = userService.findUserById(userId);
+        if(user.getItems().add(item)) {
+            userService.saveUser(user);
+            return "Added to cart";
+        }
+        return "Failed to add to cart";
     }
 
     // Update Operation

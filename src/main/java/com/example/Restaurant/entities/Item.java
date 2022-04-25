@@ -1,16 +1,13 @@
 package com.example.Restaurant.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PositiveOrZero;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
@@ -35,5 +32,8 @@ public class Item extends Base {
     @JoinColumn(name = "category_id")
     @NotNull(message = "You have to select a category.")
     private Category category;
+
+    @ManyToMany(mappedBy = "items")
+    private Set<User> users;
 
 }
