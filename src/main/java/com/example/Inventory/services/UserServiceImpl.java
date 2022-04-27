@@ -1,8 +1,8 @@
-package com.example.Restaurant.services;
+package com.example.Inventory.services;
 
-import com.example.Restaurant.entities.Item;
-import com.example.Restaurant.entities.User;
-import com.example.Restaurant.repositories.UserRespository;
+import com.example.Inventory.entities.Item;
+import com.example.Inventory.entities.User;
+import com.example.Inventory.repositories.UserRespository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

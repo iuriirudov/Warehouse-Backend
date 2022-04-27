@@ -1,9 +1,9 @@
-package com.example.Restaurant.controllers;
+package com.example.Inventory.controllers;
 
-import com.example.Restaurant.entities.Item;
-import com.example.Restaurant.entities.User;
-import com.example.Restaurant.services.ItemService;
-import com.example.Restaurant.services.UserService;
+import com.example.Inventory.entities.Item;
+import com.example.Inventory.entities.User;
+import com.example.Inventory.services.ItemService;
+import com.example.Inventory.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

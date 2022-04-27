@@ -1,4 +1,4 @@
-package com.example.Restaurant.entities;
+package com.example.Inventory.entities;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

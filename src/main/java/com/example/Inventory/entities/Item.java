@@ -1,5 +1,6 @@
-package com.example.Restaurant.entities;
+package com.example.Inventory.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -34,6 +35,7 @@ public class Item extends Base {
     private Category category;
 
     @ManyToMany(mappedBy = "items")
+    @JsonIgnore
     private Set<User> users;
 
 }

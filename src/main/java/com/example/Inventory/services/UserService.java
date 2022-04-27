@@ -1,7 +1,7 @@
-package com.example.Restaurant.services;
+package com.example.Inventory.services;
 
-import com.example.Restaurant.entities.Item;
-import com.example.Restaurant.entities.User;
+import com.example.Inventory.entities.Item;
+import com.example.Inventory.entities.User;
 
 import java.util.Set;
 

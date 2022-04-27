@@ -1,7 +1,7 @@
-package com.example.Restaurant.services;
+package com.example.Inventory.services;
 
-import com.example.Restaurant.entities.Category;
-import com.example.Restaurant.repositories.CategoryRepository;
+import com.example.Inventory.entities.Category;
+import com.example.Inventory.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

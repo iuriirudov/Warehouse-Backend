@@ -1,4 +1,4 @@
-package com.example.Restaurant;
+package com.example.Inventory;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

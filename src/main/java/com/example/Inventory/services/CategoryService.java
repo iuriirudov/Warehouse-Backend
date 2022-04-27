@@ -1,6 +1,6 @@
-package com.example.Restaurant.services;
+package com.example.Inventory.services;
 
-import com.example.Restaurant.entities.Category;
+import com.example.Inventory.entities.Category;
 
 import java.util.List;
 
